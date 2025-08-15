@@ -1,11 +1,15 @@
-# Batch-11 
+# Batch-11 DevOps Project
 
+A comprehensive DevOps project demonstrating containerization, orchestration, and infrastructure as code using Docker, Kubernetes, Helm, and Terraform.
 
-### 🎯 What You'll Learn
-- **Docker**: Multi-stage builds, container orchestration with Docker Compose
-- **Kubernetes**: Pod management, services, deployments, ingress controllers
-- **Helm**: Chart creation, templating, package management
-- **Terraform**: AWS infrastructure provisioning, state management, modular design
+## 🎯 Project Overview
+
+This project showcases modern DevOps practices and tools:
+
+- **🐳 Docker**: Multi-stage builds, container orchestration with Docker Compose
+- **☸️ Kubernetes**: Pod management, services, deployments, ingress controllers
+- **⛵ Helm**: Chart creation, templating, package management
+- **🏗️ Terraform**: AWS infrastructure provisioning, state management, modular design
 
 ---
 
@@ -17,6 +21,7 @@
 - [🏗️ Terraform](#️-terraform)
 - [📁 Project Structure](#-project-structure)
 - [🔧 Troubleshooting](#-troubleshooting)
+- [🔐 Security Best Practices](#-security-best-practices)
 - [📚 Additional Resources](#-additional-resources)
 
 ---
@@ -91,11 +96,11 @@ docker-compose -f docker/compose.yaml up -d
 docker-compose -f docker/compose.yaml ps
 
 # View logs
-docker-compose -f docker/compose.yaml logs -f websesrver
+docker-compose -f docker/compose.yaml logs -f webserver
 docker-compose -f docker/compose.yaml logs -f tomcatserver
 
 # Scale services
-docker-compose -f docker/compose.yaml up -d --scale websesrver=3
+docker-compose -f docker/compose.yaml up -d --scale webserver=3
 
 # Stop all services
 docker-compose -f docker/compose.yaml down
@@ -290,7 +295,7 @@ kubectl create secret generic app-secret --from-literal=password=mysecretpasswor
 
 # Apply from files
 kubectl apply -f k8s/configmap.yaml
-kubectl apply -f k8s/secrete.yaml
+kubectl apply -f k8s/secret.yaml
 ```
 
 ---
@@ -581,10 +586,10 @@ terraform {
 │   ├── 🌐 service.yaml          # NodePort & LoadBalancer services
 │   ├── 🎯 pod.yaml              # Multi-container pod examples
 │   ├── 📋 configmap.yaml        # Configuration management
-│   ├── 🔐 secrete.yaml          # Secrets management
+│   ├── 🔐 secret.yaml           # Secrets management
 │   ├── 🛡️ daemonset.yaml        # Node-level services
 │   ├── 📊 replicaSet.yaml       # Pod replication
-│   ├── 💾 statefull.yaml        # Stateful applications
+│   ├── 💾 stateful.yaml         # Stateful applications
 │   ├── 📁 ingress/              # Ingress configurations
 │   │   ├── 🌐 ingress.yaml      # Host-based routing
 │   │   ├── 🚀 deployment.yaml   # Ingress-specific deployments

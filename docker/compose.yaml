@@ -1,7 +1,7 @@
 version: "3"
 services:
   
-  websesrver:
+  webserver:
       image: surajbele/batch-11:alpine-apache2
       volumes:
         - /opt/data/
