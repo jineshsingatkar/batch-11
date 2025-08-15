@@ -1,8 +1,6 @@
-# Batch-11 DevOps Project
+# Batch-11
 
-A comprehensive DevOps project demonstrating containerization, orchestration, and infrastructure as code using Docker, Kubernetes, Helm, and Terraform.
-
-## 🎯 Project Overview
+## 🎯 Overview
 
 This project showcases modern DevOps practices and tools:
 
